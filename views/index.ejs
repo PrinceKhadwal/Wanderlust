@@ -1,0 +1,19 @@
+
+<% layout('/layouts/boilerplate') %>
+
+    <body style="box-sizing: border-box; ; text-align: center;">
+        <h1>All Listings</h1>
+
+        <form action="/listing/new" method="GET">
+            <button class="btn btn-dark">Create List</button>
+        </form>
+        <div>
+            <% for (const list of allListing) { %>
+                <div>
+                    <a href="/listing/<%= list.id%>" style="text-decoration: none; list-style: none;">
+                        <%= list.title %>
+                    </a>
+                </div>
+                <% } %>
+        </div>
+    </body>

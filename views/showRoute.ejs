@@ -1,0 +1,24 @@
+<% layout('/layouts/boilerplate') %>
+
+    <div class="container text-center col-5">
+        <img src="<%= list[0].image %>" class="card-img-top" alt="img">
+        <div class="card-body">
+            <h5 class="card-title">
+                <%= list[0].title%>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+                <%= list[0].location%>, <%= list[0].country%>
+            </h6>
+            $ <%= list[0].price%>/Night
+                <p class="card-text">
+                    <%= list[0].description%>
+                </p>
+
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <a href="/listing/<%= list[0]._id %>/edit" class="btn btn-dark">Edit</a>
+                    <form action="/listing/<%= list[0]._id %>?_method=DELETE" method="post" class="m-0 ">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+        </div>
+    </div>

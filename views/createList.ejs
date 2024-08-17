@@ -1,0 +1,31 @@
+
+<% layout('/layouts/boilerplate') %>
+
+    <h1 style="text-align: center;">Create New List</h1>
+    <form action="/listing" method="post" class="container needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="Input1" class="form-label">Title : </label>
+            <input type="text" class="form-control" id="Input1" name="title" placeholder="Title" required>
+          </div>
+          <div class="mb-3">
+            <label for="Textarea1" class="form-label">Description</label>
+            <textarea class="form-control" name="description" id="Textarea1" rows="3" placeholder="description" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="Input3" class="form-label">Paste Image link : </label>
+            <input type="text" class="form-control" id="Input3" name="image" placeholder="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60">
+          </div>
+          <div class="mb-3">
+            <label for="Input4" class="form-label">Enter price : </label>
+            <input type="number" class="form-control" id="Input4" name="price" placeholder="1800" required>
+          </div>
+          <div class="mb-3">
+            <label for="Input5" class="form-label">Enter location : </label>
+            <input type="text" class="form-control" id="Input5" name="location" placeholder="california" required>
+          </div>
+          <div class="mb-3">
+            <label for="Input6" class="form-label">Enter Country : </label>
+            <input type="text" class="form-control" id="Input6" name="country" placeholder="USA" required>
+          </div>
+            <button class="btn btn-dark">Create</button>
+    </form>

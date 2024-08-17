@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate') %>
+  <div style="display: flex; gap: 10px; flex-wrap: wrap;" class="container">
+
+    <% for (const list of allListing) { %>
+      <a href="/listing/<%= list.id%>" class="card" style="list-style-type: none; text-decoration: none; width: 18rem;">
+        <img src="<%= list.image %>" class="card-img-top" style="height : 18rem;" alt="image" />
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= list.title %>
+          </h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">
+            <%= list.location %>, <%= list.country %>
+          </h6>
+          <p class="card-text">
+            <%= list.description %>
+          </p>
+          <span>Rs. <%= list.price %> / Night</span>
+        </div>
+      </a>
+      <% } %>
+  </div>
